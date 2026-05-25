@@ -48,6 +48,7 @@ Instead of relying on general knowledge, the chatbot:
 
 ## 🏗️ Tech Stack
 
+* **Streamlit** – Web interface for interactive chat
 * **LangChain** – Framework for building LLM pipelines
 * **Groq (LLaMA 3)** – Fast LLM inference
 * **HuggingFace** – Embedding models
@@ -61,8 +62,9 @@ Instead of relying on general knowledge, the chatbot:
 ```
 .
 ├── YTChatbot_using_RAG_langchain.ipynb
+├── app.py
+├── requirements.txt
 ├── .env
-├── .gitignore
 └── README.md
 ```
 
@@ -74,13 +76,13 @@ Instead of relying on general knowledge, the chatbot:
 
 ```bash
 git clone https://github.com/RushdaBaqui-08/Lang-Chain.git
-cd Lang-Chain
+cd Lang-Chain/YTChatbot_using_RAG_LAngchain
 ```
 
 ### 2. Install dependencies
 
 ```bash
-pip install youtube-transcript-api langchain-community langchain-groq faiss-cpu tiktoken python-dotenv sentence-transformers
+pip install -r requirements.txt
 ```
 
 ### 3. Add your API key
@@ -91,9 +93,17 @@ Create a `.env` file and add:
 GROQ_API_KEY=your_api_key_here
 ```
 
-### 4. Run the notebook
+### 4. Run the Chatbot
 
-Open the notebook and run all cells.
+You can run either the web interface or the Jupyter notebook:
+
+* **To run the Streamlit Web Application:**
+  ```bash
+  streamlit run app.py
+  ```
+
+* **To run the Jupyter Notebook:**
+  Open `YTChatbot_using_RAG_langchain.ipynb` and run all cells.
 
 ---
 
